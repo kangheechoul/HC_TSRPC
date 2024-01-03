@@ -10,7 +10,7 @@ import { serviceProto, ServiceType } from './shared/protocols/serviceProto';
 
 // 创建 TSRPC WebSocket Server
 export const server = new WsServer(serviceProto, {
-    port: 3000,
+    port: 3005,
     json: true,
     heartbeatWaitTime: 10000,
     // Enable this to see send/recv message details
