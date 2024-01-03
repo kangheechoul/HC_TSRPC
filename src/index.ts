@@ -4,6 +4,20 @@ import { WsConnection, WsServer } from "tsrpc";
 import { Room } from './models/Room';
 import { serviceProto, ServiceType } from './shared/protocols/serviceProto';
 
+import http from "http";
+
+const ser = http.createServer((req, res)=>{
+    console.log(req.url, req.method);
+    res.end("hello node");
+});
+
+ser.listen(3001, ()=>{
+    console.log("웹 서버 실행");
+});
+
+
+
+
 // 创建 TSRPC WebSocket Server
 export const server = new WsServer(serviceProto, {
     port: 3000,
@@ -36,7 +50,7 @@ async function init() {
 
 // 启动入口点
 async function main() {
-    await init();
-    await server.start();
+    // await init();
+    // await server.start();
 }
-main();
+// main();
