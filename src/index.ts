@@ -11,7 +11,7 @@ const ser = http.createServer((req, res)=>{
     res.end("hello node");
 });
 
-ser.listen(3001, ()=>{
+ser.listen(80, ()=>{
     console.log("웹 서버 실행");
 });
 
