@@ -40,7 +40,7 @@ async function init() {
 
 // 启动入口点
 async function main() {
-    // await init();
-    // await server.start();
+    await init();
+    await server.start();
 }
-// main();
+main();
