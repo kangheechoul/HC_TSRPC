@@ -4,16 +4,6 @@ import { WsConnection, WsServer } from "tsrpc";
 import { Room } from './models/Room';
 import { serviceProto, ServiceType } from './shared/protocols/serviceProto';
 
-import http from "http";
-
-const ser = http.createServer((req, res)=>{
-    console.log(req.url, req.method);
-    res.end("hello node");
-});
-
-ser.listen(3001, ()=>{
-    console.log("웹 서버 실행");
-});
 
 
 
